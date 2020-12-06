@@ -23,7 +23,7 @@ import com.google.gson.Gson;
 public class Hw extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private int counter;
-	Map<Integer, Object> data = new HashMap<Integer, Object>();
+	Map<Integer, Object> data;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -38,6 +38,7 @@ public class Hw extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		this.data = new HashMap<Integer, Object>();
 	}
 
 	/**
