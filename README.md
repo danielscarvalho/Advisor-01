@@ -1,6 +1,11 @@
 # Advisor-01
 Simple WEB App Java - Tomcat - Servlet - WEB API
 
+Deploy at Azure cloud as WEB App
+
+- GET
+- POST (JSON)
+
 - https://advisor-01.azurewebsites.net/
 
 Referência:
