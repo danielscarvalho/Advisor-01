@@ -64,8 +64,7 @@ public class Hw extends HttpServlet {
 		hm.put("secret", rand.nextInt());
 		hm.put("hash", new Date().hashCode());
 		
-		addCounter();
-		this.data.put(this.counter, hm);
+		this.data.put(this.nextCounter(), hm);
 
 		
 		// convert map to JSON string
@@ -94,8 +93,7 @@ public class Hw extends HttpServlet {
 		
 		hm.put("now", new Date());
 		
-		this.addCounter();
-		this.data.put(this.counter, hm);
+		this.data.put(this.nextCounter(), hm);
 
 
 		//System.out.println(request.getParameterValues());
@@ -127,8 +125,9 @@ public class Hw extends HttpServlet {
 		// TODO Auto-generated method stub
 	}
 	
-	private synchronized void addCounter() {
+	private synchronized int nextCounter() {
 		this.counter += 1;
+		return this.counter;
 	}
 
 }
